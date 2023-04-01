@@ -47,6 +47,19 @@ void powerNum(){
   printf("%.2lf to the power of %.2lf is %.2lf",a,b,pow(a,b));
 }
 
+
+void perimeterCircle(double a){
+  printf("Perimeter is: %.2lf",2*3.14*a);
+}
+
+void areaCircle(){
+   printf("Enter radius: ");
+  double a;
+  scanf("%lf",&a);
+  printf("Area is: %.2lf\n",3.14*a*a);
+  perimeterCircle(a);
+}
+
 int main(void) {
   printf("Enter a character:\n");
   printf("'+' for addition.\n");
@@ -55,6 +68,7 @@ int main(void) {
   printf("'/' for division.\n");
   printf("'s' for square root.\n");
   printf("'p' for power.\n");
+  printf("'c' for area and perimeter of a circle.\n");
 
   char c;
   scanf("%c",&c);
@@ -71,6 +85,9 @@ int main(void) {
     squareRoot();
   }else if(c=='p'){
     powerNum();
+  }else if(c=='c'){
+    areaCircle();
+
   }else{
     printf("\ninvalid operation.");
   }
